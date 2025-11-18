@@ -2,6 +2,7 @@
 
 import FeaturesSection from "@/components/features";
 import HeroSection from "@/components/hero";
+import Pricing from "@/components/pricing";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,7 +43,7 @@ export default function Home() {
       {/* Features */}
       <FeaturesSection />
 
-      {/* Pricing */}
+      <Pricing/>
 
       <section className="py-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
