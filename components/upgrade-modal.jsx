@@ -50,7 +50,17 @@ export function UpgradeModal({ isOpen, onClose, restrictedTool, reason }) {
                         </Alert>
                     )}
 
-                    <PricingTable />
+                    <PricingTable
+                        checkoutProps={{
+                            appearance: {
+                                elements: {
+                                    drawerRoot: {
+                                        zIndex: 20000,
+                                    }
+                                }
+                            }
+                        }}
+                        />
                 </div>
 
                 <DialogFooter className="justify-center">
