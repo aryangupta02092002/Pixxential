@@ -3,11 +3,13 @@
 import { CanvasContext } from "@/context/context";
 import { api } from "@/convex/_generated/api";
 import { useConvexQuery } from "@/hooks/use-convex-query";
-import { Loader2, Monitor } from "lucide-react";
+import { Edit, Loader2, Monitor, Sidebar } from "lucide-react";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";
 import { RingLoader } from "react-spinners";
 import CanvasEditor from "./_components/canvas";
+import EditorSidebar from "./_components/editor-sidebar";
+import EditorTopbar from "./_components/editor-topbar";
 
 const Editor = () => {
     const params = useParams();
@@ -95,8 +97,12 @@ const Editor = () => {
                         </div>
                     )}
 
+                    {/* TopBar */}
+                    <EditorTopbar project={project} />
+
                     <div className="flex flex-1 overflow-hidden">
                         {/*Sidebar*/}
+                        <EditorSidebar project={project} />
 
                         <div className="flex-1 bg-slate-800"><CanvasEditor project={project}/></div>
                     </div>
