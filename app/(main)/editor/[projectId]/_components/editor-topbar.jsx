@@ -260,7 +260,14 @@ const EditorTopbar = ({ project }) => {
                 onClose={() => {
                     setShowUpgradeModal(false);
                     setRestrictedTool(null);
-                }}/>
+                }}
+                restrictedTool={restrictedTool}
+                reason={
+                    restrictedTool === "export"
+                    ? "Free plan users have limited export options, 20 exports per month. Upgrade to Pro for unlimited exports."
+                    : undefined
+                }
+                />
         </>
     );
 }
