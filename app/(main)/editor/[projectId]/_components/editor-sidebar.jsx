@@ -15,6 +15,7 @@ import { useCanvas } from "@/context/context";
 import CropContent from "./_tools/crop";
 import ResizeControls from "./_tools/resize";
 import { AdjustControls } from "./_tools/adjust";
+import BackgroundControls from "./_tools/ai-background";
 
 const TOOL_CONFIGS = {
     resize: {
@@ -93,10 +94,8 @@ function renderToolContent(activeTool, project) {
             return <ResizeControls project={project} />;
         case "adjust":
             return <AdjustControls />;
-        // case "adjust":
-        //     return <AdjustControls />;
-//         case "background":
-//             return <BackgroundControls project={project} />;
+        case "background":
+            return <BackgroundControls project={project} />;
 //         case "ai_extender":
 //             return <AIExtenderControls project={project} />;
 //         case "text":
